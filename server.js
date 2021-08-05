@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/puppies', require('./routes/api/puppies'));
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
